@@ -115,6 +115,16 @@
       <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/laravel/telescope" />
       <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/laravel/scout" />
       <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/algolia/algoliasearch-client-php" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/http-interop/http-factory-guzzle" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/meilisearch/meilisearch-php" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/clue/stream-filter" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">

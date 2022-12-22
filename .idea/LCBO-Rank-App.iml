@@ -8,6 +8,16 @@
       <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/maximebf/debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/laravel/telescope" />
       <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/algolia/algoliasearch-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/php-http/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/php-http/message" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/php-http/discovery" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/php-http/message-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/php-http/httplug" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/php-http/client-common" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/http-interop/http-factory-guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/meilisearch/meilisearch-php" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/clue/stream-filter" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

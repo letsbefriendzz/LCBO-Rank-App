@@ -9,10 +9,12 @@
         "ext-pdo": "*",
         "algolia/algoliasearch-client-php": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
+        "http-interop/http-factory-guzzle": "^1.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/scout": "^9.6",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "meilisearch/meilisearch-php": "^0.26.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.7",

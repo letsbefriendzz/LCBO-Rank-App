@@ -5,3 +5,5 @@ lcbo-rank-backend/.env
 /.idea/misc.xml
 lcbo-rank-backend/tests/Fixtures/beer-response.json
 /lcbo-rank-backend/vendor/
+lcbo-rank-backend/LCBO-Rank-App.iml
+lcbo-rank-backend/php.xml
