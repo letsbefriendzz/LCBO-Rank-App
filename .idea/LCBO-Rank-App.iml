@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/laravel/telescope" />
       <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/algolia/algoliasearch-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/snoeren-development/laravel-currency-casting" />
+      <excludeFolder url="file://$MODULE_DIR$/lcbo-rank-backend/vendor/laravel/ui" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

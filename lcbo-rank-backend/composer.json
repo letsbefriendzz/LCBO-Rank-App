@@ -13,6 +13,7 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/scout": "^9.6",
         "laravel/tinker": "^2.7",
+        "laravel/ui": "^4.1",
         "snoeren-development/laravel-currency-casting": "^1.5"
     },
     "require-dev": {

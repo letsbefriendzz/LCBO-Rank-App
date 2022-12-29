@@ -24,6 +24,7 @@ class AlcoholController extends Controller
         return AlcoholResource::collection(
             Alcohol::filter($filters)
                 ->where('price_index', '!=', 'null')
+                ->where('out_of_stock', false)
                 ->paginate(self::PAGINATE_BY)
         );
     }

@@ -116,6 +116,7 @@
       <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/laravel/scout" />
       <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/algolia/algoliasearch-client-php" />
       <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/snoeren-development/laravel-currency-casting" />
+      <path value="$PROJECT_DIR$/lcbo-rank-backend/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
