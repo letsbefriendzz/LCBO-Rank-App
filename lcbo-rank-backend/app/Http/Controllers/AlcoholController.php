@@ -18,25 +18,17 @@ class AlcoholController extends Controller
         return new AlcoholResource($alcohol);
     }
 
-    public function index(AlcoholFilters $filters): AnonymousResourceCollection
+    public function index(AlcoholFilters $filters, Request $request)
     {
         // todo refactor where to model level?
-        return AlcoholResource::collection(
-            Alcohol::filter($filters)
-                ->where('price_index', '!=', 'null')
-                ->paginate(self::PAGINATE_BY)
-        );
-    }
 
-    public function getUpdated(Request $request): AnonymousResourceCollection
-    {
-        $updatedSince = $request->input('updatedSince', Carbon::now()->subWeek());
-        $updatedRecords = Alcohol::query()
-            ->where('updated_at', '>', $updatedSince)
-            ->orderBy('permanent_id')
+        $alcohols = Alcohol::filter($filters)
+            ->where('price_index', '!=', 'null')
             ->paginate(self::PAGINATE_BY);
-
-        return AlcoholResource::collection($updatedRecords);
+        $alcohols->map(fn($a) => (new AlcoholResource($a))->toArray($request));
+        return $alcohols;
+//        return AlcoholResource::collection(
+//        );
     }
 
     public function search(Request $request)
