@@ -63,7 +63,7 @@ class AlcoholFilters extends QueryFilter
 
     public function category($category): Builder
     {
-        return $this->builder->where('category', $category);
+        return $this->builder->where('category', '==', $category);
     }
 
     public function subcategory($subcategory): Builder
@@ -84,8 +84,6 @@ class AlcoholFilters extends QueryFilter
     public function search($search): Builder // todo test this somehow
     {
         return $this->builder
-            ->where('title', 'like', '%' . $search . '%')
-            ->orWhere('description', 'like', '%' . $search . '%')
-            ->orWhere('brand', 'like', '%' . $search . '%');
+            ->where('title', 'like', '%' . $search . '%');
     }
 }

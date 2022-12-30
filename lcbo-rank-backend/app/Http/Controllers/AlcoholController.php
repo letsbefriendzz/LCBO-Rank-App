@@ -18,8 +18,9 @@ class AlcoholController extends Controller
         return new AlcoholResource($alcohol);
     }
 
-    public function index(AlcoholFilters $filters): AnonymousResourceCollection
+    public function index(AlcoholFilters $filters, Request $request): AnonymousResourceCollection
     {
+//        dd($request->input('category'));
         // todo refactor where to model level?
         return AlcoholResource::collection(
             Alcohol::filter($filters)
