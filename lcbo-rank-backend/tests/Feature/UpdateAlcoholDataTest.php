@@ -3,9 +3,11 @@
 namespace Tests\Feature;
 
 use App\Console\Commands\UpdateAlcoholData;
+use App\Events\PricesUpdated;
 use App\Models\Alcohol;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Http\Client\Request;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
 use Tests\Fixtures\FixtureLoader;
 use Tests\TestCase;
@@ -219,5 +221,28 @@ class UpdateAlcoholDataTest extends TestCase
             'permanent_id' => $id,
             'price' => $initPrice,
         ]);
+    }
+
+    public function test_it_emits_prices_updated_event()
+    {
+        Http::fake([
+            UpdateAlcoholData::SEARCH_REQ_URL => Http::sequence()
+                ->push(FixtureLoader::loadRawFixture('empty-response'),
+                    200,
+                    ['content-type' => 'application/json']
+                )
+                ->push(FixtureLoader::loadRawFixture('beer-response-chunk'),
+                    200,
+                    ['content-type' => 'application/json']
+                )
+                ->push(FixtureLoader::loadRawFixture('PriceChangeFixtures/beer-response-chunk-price-changes'),
+                    200,
+                    ['content-type' => 'application/json']
+                )
+        ]);
+
+        Event::fake();
+        $this->artisan("alcohol:update --category=\"Products|Beer & Cider\"");
+        Event::assertDispatched(PricesUpdated::class);
     }
 }

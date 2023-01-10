@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Events\PricesUpdated;
+use App\Listeners\CheckForPriceChanges;
 use App\Models\Alcohol;
 use App\Observers\AlcoholObserver;
 use Illuminate\Auth\Events\Registered;
@@ -19,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        PricesUpdated::class => [
+            CheckForPriceChanges::class,
         ],
     ];
 

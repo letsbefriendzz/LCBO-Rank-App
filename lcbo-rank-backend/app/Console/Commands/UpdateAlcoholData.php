@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Events\PricesUpdated;
 use App\LCBOApiProduct;
 use App\Models\Alcohol;
 use Carbon\Carbon;
@@ -64,7 +65,7 @@ class UpdateAlcoholData extends Command
             $this->fetchAllDataForGivenCategory($category);
         }
 
-        $this->info('Make sure to run \'php artisan price-change:find\' now!');
+        PricesUpdated::dispatch();
     }
 
     public function getExpectedNumberOfRecords(string $category): int
